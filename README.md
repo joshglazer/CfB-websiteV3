@@ -1,22 +1,22 @@
-![Code for Baltimore](/docs/img/CfB.png)
+# codeforbaltimore.org
 
-# Our Website!
-This is the Code for Baltimore website!
+> The Code for Baltimore website
 
-## Documentation
-We've included a `docs` folder with a template [Tech Spec](/docs/Tech_Spec.md) and [Best Practices](/docs/Best_Practices.md) document, though using Github's Wiki capabilities is also a good idea. This will get you started with documenting your project.  Other documents and relevant information that has no other place can live in the `docs` folder.  Replace this paragraph with a brief breakdown of what you've included in your `docs` folder.
+## Build Setup
 
-## Setup
-What does someone need to do to get started with your project? Do they need to:
-* install software?
-* run some commands?
-* do something else?
+``` bash
+# install dependencies
+$ npm install
 
-In this section of the `README` you should include any information a new contributor or user of the project needs to know to get running locally and setup.
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-## Testing
-What does someone need to do to test their work? Have you included a specific testing framework or guideline (hint: you should)? Any information about testing should be added here.
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-## Special Thanks!
-A very talented team from The University of Maryland:
--   
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
