@@ -10,8 +10,8 @@
         <div class="navbar-nav align-items-center">
           <nuxt-link to="/about" exact>About Us</nuxt-link>
           <nuxt-link to="/get-involved" exact>Get Involved</nuxt-link>
-          <a class="nav-item nav-link" href="events.html">Events</a>
-          <a class="nav-item nav-link" href="projects.html">Projects</a>
+          <nuxt-link to="/events" exact>Events</nuxt-link>
+          <nuxt-link to="/projects" exact>Projects</nuxt-link>
           <a role="button" class="btn btn-outline-primary" target="_blank" href="https://www.codeforamerica.org/donate-to-a-brigade">Donate</a>
         </div>
       </div>

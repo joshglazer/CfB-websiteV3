@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div id="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <div class="d-flex flex-row-reverse">
@@ -7,6 +8,7 @@
         </div>
       </div>
     </div>
+
     <div class="container py-4">
       <div class="row text-center intro-action">
         <div class="col-sm p-4">
@@ -18,7 +20,7 @@
           <img src="images/icon_slack.png" class="mx-auto d-block img-fluid" alt="Slack logo/icon">
           <p class="lead">Stay in touch and connect with us on Slack</p>
           <a role="button" class="btn btn-outline-primary my-2" target="_blank" href="https://join.slack.com/t/codeforbaltimoreteam/shared_invite/enQtMzYxNzgzNDIyOTQ4LTBhOTdhY2JlZmJhZGQ2ZDZhM2E0MWRhYTYwM2EwZDk1MDU4MTFhNTM0YjVlNTE2YjYyYmY2Y2Q0MzE3MjQxMzI">Connect on Slack</a>
-        </div>
+        </div> 
         <div class="col-sm p-4">
           <img src="images/icon_meetup.png" class="mx-auto d-block img-fluid" alt="Go to Meetup logo/icon">
           <p class="lead">Follow our latest events on Meetup</p>
@@ -26,7 +28,6 @@
         </div>
       </div>
     </div>
-
     <featured/>
   </div>
 </template>
@@ -40,7 +41,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

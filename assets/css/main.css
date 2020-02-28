@@ -57,7 +57,7 @@ body{
 	.navbar-expand-lg .navbar-nav .nav-link {font-size: 16px; padding: .70rem 1rem;}
 }
 .jumbotron {
-  background: linear-gradient(90deg, rgba(23,0,255,0.18951330532212884) 100%, rgba(104,121,9,0.29315476190476186) 100%),url(../images/cfb-jumbo-header.jpg);
+  background: linear-gradient(90deg, rgba(23,0,255,0.18951330532212884) 100%, rgba(104,121,9,0.29315476190476186) 100%),url(/images/cfb-jumbo-header.jpg);
   background-size: cover;
 	color: #fff;
 	border-radius: 0;
@@ -148,7 +148,7 @@ footer .btn-outline-dark {border: 3px solid; font-size: 17px;}
 /* Get Involved CSS*/
 
 .jumbotron-involved {
-  background: linear-gradient(90deg, rgba(0,243,255,0.15870098039215685) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(../images/cfb-involved-header.jpg);
+  background: linear-gradient(90deg, rgba(0,243,255,0.15870098039215685) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(/images/cfb-involved-header.jpg);
   background-size: cover;
 	color: #fff;
 	border-radius: 0;
@@ -175,7 +175,7 @@ footer .btn-outline-dark {border: 3px solid; font-size: 17px;}
 #upcoming-events .btn-outline-primary:hover {background-color: #1e6488; color: white;}
 
 .jumbotron-events{
-  background: linear-gradient(90deg, rgba(0,67,255,0.3575805322128851) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(../images/events-header1.jpg);
+  background: linear-gradient(90deg, rgba(0,67,255,0.3575805322128851) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(/images/events-header1.jpg);
   background-size: cover;
 	color: #fff;
 	border-radius: 0;
@@ -187,7 +187,7 @@ footer .btn-outline-dark {border: 3px solid; font-size: 17px;}
 /* Projects CSS */
 
 .jumbotron-projects {
-  background: linear-gradient(90deg, rgba(255,0,93,0.22032563025210083) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(../images/cfb_project_caro5.jpg);
+  background: linear-gradient(90deg, rgba(255,0,93,0.22032563025210083) 100%, rgba(9,67,121,0.5144432773109244) 100%),url(/images/cfb_project_caro5.jpg);
   background-size: cover;
 	color: #fff;
 	border-radius: 0;
@@ -234,7 +234,7 @@ footer .btn-outline-dark {border: 3px solid; font-size: 17px;}
 /* Donate CSS*/
 
 .jumbotron-donate {
-  background: linear-gradient(90deg, rgba(0,255,151,0.15029761904761907) 100%, rgba(104,121,9,0.29315476190476186) 100%),url(../images/donate-header.jpg);
+  background: linear-gradient(90deg, rgba(0,255,151,0.15029761904761907) 100%, rgba(104,121,9,0.29315476190476186) 100%),url(/images/donate-header.jpg);
   background-size: cover;
 	color: #fff;
 	border-radius: 0;

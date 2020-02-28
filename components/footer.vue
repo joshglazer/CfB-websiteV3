@@ -31,9 +31,9 @@
           <div class="col-sm">
             <h2>About</h2>
             <ul>
-              <li><a href="projects.html">Projects</a></li>
+          <nuxt-link to="/projects" exact>Projects</nuxt-link>
               <li><nuxt-link to="/about#team" exact>Team</nuxt-link></li>
-              <li><a href="code-for-conduct.html">Code of Conduct</a></li>
+              <li><nuxt-link to="/code-of-conduct" exact>Code of Conduct</nuxt-link></li>
               <li><a target="_blank" href="https://www.codeforamerica.org/donate-to-a-brigade">Donate</a></li>
             </ul>
           </div>

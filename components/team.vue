@@ -6,10 +6,10 @@
 
             <div class="row text-center py-3">
                 <div class="col-sm-4 py-4 mx-auto">
-                <img src="images/kelsey-200.jpg" class="img-fluid mb-2" alt="Kelsey Krach">
-                <h4>Kelsey Krach</h4>
+                <img src="images/default-headshot.jpg" class="img-fluid mb-2" alt="Kelsey Krach">
+                <h4>Isabel Abaunza</h4>
                 <p class="text-muted">Brigade Co-Captain</p>
-                <a href="mailto:kelsey@codeforbaltimore.org">kelsey@codeforbaltimore.org</a>
+                <a href="mailto:isabel@codeforbaltimore.org">isabel@codeforbaltimore.org</a>
                 </div>
                 <div class="col-sm-4 py-4 mx-auto">
                 <img src="images/mike-200.jpg" class="img-fluid mb-2" alt="Mike Fried">
@@ -18,22 +18,16 @@
                 <a href="mailto:mike@codeforbaltimore.org">mike@codeforbaltimore.org</a>
                 </div>
                 <div class="col-sm-4 py-4 mx-auto">
-                <img src="images/bryan-200.jpg" class="img-fluid mb-2" alt="Bryan Connor">
-                <h4>Bryan Connor</h4>
+                <img src="images/default-headshot.jpg" class="img-fluid mb-2" alt="Bryan Connor">
+                <h4>Vincent Escobedo</h4>
                 <p class="text-muted">Delivery Lead</p>
-                <a href="mailto:bryan@codeforbaltimore.org">bryan@codeforbaltimore.org</a>
+                <a href="mailto:vincent@codeforbaltimore.org">vincent@codeforbaltimore.org</a>
                 </div>
                 <div class="col-sm-4 py-4 mx-auto">
-                <img src="images/sean-200.jpg" class="img-fluid mb-2" alt="Sean Astro">
-                <h4>Sean Astro</h4>
+                <img src="images/jason.jpg" class="img-fluid mb-2" alt="Sean Astro">
+                <h4>Jason Anton</h4>
                 <p class="text-muted">Tech Lead</p>
-                <a href="mailto:hello@codeforbaltimore.org">hello@codeforbaltimore.org</a>
-                </div>
-                <div class="col-sm-4 py-4 mx-auto">
-                <img src="images/angelina-200.jpg" class="img-fluid mb-2" alt="Angelina Millare">
-                <h4>Angelina Millare</h4>
-                <p class="text-muted">Community Manager</p>
-                <a href="mailto:angelina@codeforbaltimore.org">angelina@codeforbaltimore.org</a>
+                <a href="mailto:jason@codeforbaltimore.org">jason@codeforbaltimore.org</a> 
                 </div>
             </div>
 
