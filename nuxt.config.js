@@ -1,4 +1,8 @@
-
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/CfB-websiteV3/'
+  }
+} : {}
 export default {
   mode: 'spa',
   /*
@@ -52,5 +56,6 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  routerBase
 }
