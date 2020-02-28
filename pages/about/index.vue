@@ -1,37 +1,108 @@
 <template>
-    <div id="about">
-        <div class='embed-container'>
-            <iframe src='https://www.youtube.com/embed//mYzMl_HnEZU' allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-            <div class="row py-4" id="about-us">
-                <div class="col-sm py-2 my-auto">
-                <h1 class="display-4">About Code for Baltimore</h1>
-                <p>We are a community of volunteers who develop open-source projects as a Code for America Brigade by focusing on open government, open data, great design, and social good in Baltimore.</p>
-                <p>While we always need more developers, Code for Baltimore welcomes designers, content creators, copywriters, storytellers, researchers, project managers, marketing specialists, and any other tech or government enthusiast!<p>
-
-                <p>We have two types of meetups:</p>
-                <ol>
-                    <li>Hack Nights: project nights where our members work on select projects to benefit Baltimore communities.</li>
-                    <li>Community Nights: networking events with members of the community and the group to discuss issues that could be solved with civic tech.</li>
-                </ol>
-                </div>
-                <div class="col-sm p-4">
-                <img src="images/cfb-about-header.jpg" class="img-fluid" alt="Code for Baltimore Welcome image">
-                </div>
-            </div>
-
-        </div>
-        <team/>
+  <div id="about">
+    <div class="embed-container">
+      <iframe src="https://www.youtube.com/embed//mYzMl_HnEZU" allowfullscreen></iframe>
     </div>
+
+    <div class="container">
+      <div class="row py-4" id="about-us">
+        <div class="col-sm py-2 my-auto">
+          <h1 class="display-4">About Code for Baltimore</h1>
+          <p>We are a community of volunteers who develop open-source projects as a Code for America Brigade by focusing on open government, open data, great design, and social good in Baltimore.</p>
+          <p>While we always need more developers, Code for Baltimore welcomes designers, content creators, copywriters, storytellers, researchers, project managers, marketing specialists, and any other tech or government enthusiast!</p>
+          <p></p>
+          <p>We have two types of meetups:</p>
+          <ol>
+            <li>Hack Nights: project nights where our members work on select projects to benefit Baltimore communities.</li>
+            <li>Community Nights: networking events with members of the community and the group to discuss issues that could be solved with civic tech.</li>
+          </ol>
+        </div>
+        <div class="col-sm p-4">
+          <img
+            src="images/cfb-about-header.jpg"
+            class="img-fluid"
+            alt="Code for Baltimore Welcome image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-4" id="team">
+      <div class="col-sm-12 py-3">
+        <h3 class="display-4">Team Members</h3>
+        <div v-for="(member, index) in team" :key="index">
+          <div class="col-sm-4 py-4 mx-auto">
+            <img
+              v-if="member.fields.picture"
+              v-bind:src="'https:' + member.fields.picture.fields.file.url"
+              class="img-fluid mb-2"
+              v-bind:alt="member.fields.name"
+            />
+            <img
+              v-else
+              src="images/default-headshot.jpg"
+              class="img-fluid mb-2"
+              v-bind:alt="member.fields.name"
+            />
+
+            <h4>{{ member.fields.name }}</h4>
+            <div v-if="member.fields.socialLinks" class="socials">
+              <ul v-for="(link, i) in member.fields.socialLinks" :key="i">
+                <li>
+                  <a v-bind:href="link" target="_blank">
+                    <fa v-if="link.includes('github')" :icon="faGithub" />
+                    <fa v-if="link.includes('linkedin')" :icon="faLinkedin" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="text-muted">{{ member.fields.title }}</p>
+            <a v-bind:href="'mailto:' + member.fields.email">{{ member.fields.email }}</a>
+          </div>
+        </div>
+
+        <p class="mt-2">
+          We are always looking for more support! Currently, we need a
+          <strong>Co-Tech Lead</strong> to join our Core Team. Check out the position descriptions
+          <a
+            href="https://docs.google.com/document/d/1sZN4Ct-JjMgDASn_QNjWur7SY0M_6rst5BnxKXV4qn8/edit"
+            target="_blank"
+          >here</a>. If you are interested in these positions, please email us -
+          <a href="mailto:hello@codeforbaltimore.org" target="_blank">hello@codeforbaltimore.org</a>.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Team from '~/components/team.vue'
+import { createClient } from "~/plugins/contentful.js";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+const client = createClient();
+
 export default {
-    components:  {
-        Team
+  computed: {
+    faGithub() {
+      return faGithub;
+    },
+    faLinkedin() {
+      return faLinkedin;
     }
-}
+  },
+  asyncData({ env }) {
+    return client
+      .getEntries({
+        content_type: "team",
+        order: "fields.title",
+        include: 5
+      })
+      .then(team => {
+        return {
+          team: team.items
+        };
+      })
+      .catch(console.error);
+  }
+};
 </script>
