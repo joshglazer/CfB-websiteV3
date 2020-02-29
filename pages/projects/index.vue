@@ -55,7 +55,7 @@
             <h3 class="display-4">
               <a v-bind:href="project.fields.githubLink" target="_blank">{{ project.fields.title }}</a>
             </h3>
-            <p>{{ project.fields.description }}</p>
+            <div v-html="$md.render(project.fields.description)"></div>
             <div v-if="project.fields.skillsNeeded" class="my-3 skills-list">
               <h5>Skills Needed</h5>
               <ul v-for="(skill,i) in project.fields.skillsNeeded" :key="i">

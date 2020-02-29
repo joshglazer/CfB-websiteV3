@@ -48,7 +48,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/markdownit'
   ],
   /*
   ** Fontawesome config
@@ -61,6 +62,15 @@ export default {
         icons: ['faGithub', 'faLinkedin']
       }
     ]
+  },
+  /*
+  ** Markdownit config
+  */
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   },
   /*
   ** Build configuration
