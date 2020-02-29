@@ -30,7 +30,7 @@
     <div class="row py-4" id="team">
       <div class="col-sm-12 py-3">
         <h3 class="display-4">Team Members</h3>
-        <div v-for="(member, index) in team" :key="index">
+        <div v-for="(member, index) in team.items" :key="index">
           <div class="col-sm-4 py-4 mx-auto">
             <img
               v-if="member.fields.picture"
@@ -68,12 +68,16 @@
             href="https://docs.google.com/document/d/1sZN4Ct-JjMgDASn_QNjWur7SY0M_6rst5BnxKXV4qn8/edit"
             target="_blank"
           >here</a>. If you are interested in these positions, please email us -
-          <a href="mailto:hello@codeforbaltimore.org" target="_blank">hello@codeforbaltimore.org</a>.
+          <a
+            href="mailto:hello@codeforbaltimore.org"
+            target="_blank"
+          >hello@codeforbaltimore.org</a>.
         </p>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
@@ -90,19 +94,16 @@ export default {
       return faLinkedin;
     }
   },
-  asyncData({ env }) {
-    return client
-      .getEntries({
-        content_type: "team",
-        order: "fields.title",
-        include: 5
-      })
-      .then(team => {
-        return {
-          team: team.items
-        };
-      })
-      .catch(console.error);
+  async asyncData({ env }) {
+    const vars = {};
+
+    vars.team = await client.getEntries({
+      content_type: "team",
+      order: "fields.title",
+      include: 5
+    });
+
+    return vars;
   }
 };
 </script>
